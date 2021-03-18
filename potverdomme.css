@@ -65,12 +65,14 @@ body {
 #spel {
 	border: solid white 5px;
 	border-radius: 25px;
-	background-color: #c6e4ee;
+	background: rgb(238,174,202);
+	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 	margin-bottom: 40px;
 }
 
 button {
 	text-align: center;
+	color: white;
 
 }
 
@@ -93,18 +95,25 @@ p {
 	img{
 		width: 100vw;
 		height: 150px;
-		border-radius: 150px;
+		border-radius: 100px;
+		
+
+
 	}
 
+/* ik geef eerlijk toe dat ik dit samen met internet heb gemaakt of beter gezegd internet heeft dit voor mij gemaakt
+	de link: http://css3.bradshawenterprises.com/cfimg/#cfimg1;
+	ik doel hiermee natuurlijk de animatie derest van dit prachtige werkje is van mij. 
+*/
 
-	
 	#picture img {
 	position: absolute;
-	  left:0;
-	  -webkit-transition: opacity 1s ease-in-out;
-	  -moz-transition: opacity 1s ease-in-out;
-	  -o-transition: opacity 1s ease-in-out;
-	  transition: opacity 1s ease-in-out;
+	
+	left:0;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
 	}
 
 	@keyframes pictureFadeInOut {
@@ -121,6 +130,7 @@ p {
 	opacity:0;
 	}
 	}
+	
 
 	#picture img.hamster {
 	animation-name: pictureFadeInOut;
@@ -136,7 +146,8 @@ p {
 		height: 100px;
 		margin-right: 50px;
 		font-size: 22px;
-		background-color: white;
+		background: rgb(249,202,244);
+		background: radial-gradient(circle, rgba(249,202,244,1) 0%, rgba(148,187,233,1) 100%);
 		border-radius: 100px;
 	}
 
@@ -144,12 +155,13 @@ p {
 		width: 100px;
 		height: 100px;
 		font-size: 22px;
-		background-color: white;
+		background: #d3d3d3;
 		border-radius: 100px;
 	}
 
 
 	#main {
+		margin-top: 40px;
 		font-size: 10px;
 		text-align: center;
 
@@ -166,26 +178,191 @@ p {
 	}
 
 	#spel {
-		
 		font-size: 10px;
 		text-align: center;
+
 	}
+
+	.flex2 {
+		display: flex;
+		flex-flow: column;
+	}
+
+
+
 }
 
 
 @media only screen and (min-width: 768px){
 
-	.flex {
+	.flex2 {
 		display: flex;
-		flex-flow: column-reverse;
-		
+		flex-flow: row;
+		justify-content: space-around;
 	}
+		
+	img {
+		height: 200px;
+	}
+
+	img#ruimte {
+		height: 300px;
+	}
+
+	#picture img.hamster {
+	height: 200px;
+	animation-name: pictureFadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 8s;
+	animation-direction: alternate;
+	}
+
+	#main2 {
+		padding-top: 40px;
+		height: 160px;
+		width: 325px;
+		border-radius: 75px;
+		text-align: center;
+	}
+
+
+	#main3 {
+		padding-top: 40px;
+		height: 160px;
+		width: 325px;
+		border-radius: 75px;
+		text-align: center;
+	}
+	#spel {
+		font-size: 10px;
+		text-align: center;
+		border-radius: 80px;
+	}
+
 }
 
+@media only screen and (min-width: 1025px ) {
 
 
+	.flex2 {
+		display: flex;
+		flex-flow: row-reverse;
+		justify-content: space-around;
+	}
+		
+	img {
+		height: 250px;
+	}
 
+	img#ruimte {
+		height: 400px;
+	}
 
+	#picture img.hamster {
+	height: 250px;
+	animation-name: pictureFadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 8s;
+	animation-direction: alternate;
+	}
+
+	#main {
+		height: 150px;
+		font-size: 14px;
+	}
+
+	#main2 {
+		font-size: 14px;
+		padding-top: 10px;
+		height: 180px;
+		width: 405px;
+		border-radius: 75px;
+		text-align: center;
+	}
+
+	#main3 {
+		font-size: 14px;
+		padding-top: 10px;
+		height: 180px;
+		width: 405px;
+		border-radius: 75px;
+		text-align: center;
+	}
+
+	#spel {
+		font-size: 13px;
+		text-align: center;
+		border-radius: 80px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+}
+
+@media only screen and (min-width: 1440px ) {
+	#main {
+		height: 180px;
+		width: 405px;
+		font-size: 14px;
+	}
+
+	#main2 {
+		font-size: 14px;
+		padding-top: 0px;
+		height: 180px;
+		width: 405px;
+		margin-top: 40px;
+
+		border-radius: 75px;
+		text-align: center;
+	}
+
+	#main3 {
+		font-size: 14px;
+		padding-top: 10px;
+		margin-top: 40px;
+		height: 180px;
+		width: 405px;
+		margin-right: 30px;
+		border-radius: 75px;
+		text-align: center;
+		display: flex;
+		flex-flow: column;
+	}
+
+	.flex {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-evenly;
+	}
+
+	#spel {
+		font-size: 13px;
+		text-align: center;
+		border-radius: 80px;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	img {
+		height: 400px;
+	}
+
+	img#ruimte {
+		height: 500px;
+	}
+
+	#picture img.hamster {
+	height: 500px;
+	animation-name: pictureFadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 8s;
+	animation-direction: alternate;
+	}
+}
 
 
 

@@ -32,7 +32,7 @@ if (minutes < 10){
 
 
 
-document.getElementById('clock').innerHTML= hours + ':' + minutes + ':' + seconds;
+document.getElementById('clock').innerHTML= hours + ':' + minutes + ':' + seconds + ' ' +'GMT+1';
 }
 
 klok();
@@ -90,7 +90,7 @@ if (minutes < 10){
 
 
 
-document.getElementById('vietnam').innerHTML= hours + ':' + minutes + ':' + seconds;
+document.getElementById('vietnam').innerHTML= hours + ':' + minutes + ':' + seconds + ' ' + 'GMT+7';
 }
 
 
@@ -129,7 +129,7 @@ var seconds = today.getSeconds();
 var hours = today.getHours();
 var minutes = today.getMinutes();
 
-hours = hours - 9;
+hours = hours - 8;
 
 if (hours < 0 ) {
 	hours = hours + 24
@@ -160,7 +160,7 @@ if (minutes < 10){
 
 
 
-document.getElementById('la').innerHTML= hours + ':' + minutes + ':' + seconds;
+document.getElementById('la').innerHTML= hours + ':' + minutes + ':' + seconds + ' ' + 'PDT';
 }
 
 klok3();
@@ -206,6 +206,7 @@ document.getElementById('start').onclick = function(){
 document.getElementById('stop').onclick = function(){
 	clearInterval(stopwatchHandle);
 }
+
 
 
 
